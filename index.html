@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Travel Globe - Premium Asian Travel Packages 2026</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0ea5e9;
+            --secondary: #f59e0b;
+            --dark: #0f172a;
+            --light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+            background: var(--light);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-circle {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: rotate 20s linear infinite;
+            box-shadow: 0 0 30px rgba(102, 126, 234, 0.5);
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.3); }
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: width 0.3s;
+        }
+
+        .nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+
+        .hero-slider {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 5px;
+        }
+
+        .hero-slide {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            transition: all 0.5s;
+        }
+
+        .hero-slide:nth-child(1) { 
+            animation: slideZoom 8s ease-in-out infinite;
+            animation-delay: 0s;
+        }
+        .hero-slide:nth-child(2) { 
+            animation: slideZoom 8s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+        .hero-slide:nth-child(3) { 
+            animation: slideZoom 8s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+        .hero-slide:nth-child(4) { 
+            animation: slideZoom 8s ease-in-out infinite;
+            animation-delay: 3s;
+        }
+        .hero-slide:nth-child(5) { 
+            animation: slideZoom 8s ease-in-out infinite;
+            animation-delay: 4s;
+        }
+        .hero-slide:nth-child(6) { 
+            animation: slideZoom 8s ease-in-out infinite;
+            animation-delay: 5s;
+        }
+
+        @keyframes slideZoom {
+            0%, 100% { transform: scale(1); filter: brightness(0.7); }
+            50% { transform: scale(1.15); filter: brightness(0.9); }
+        }
+
+        .hero-slide:hover {
+            transform: scale(1.05) !important;
+            z-index: 5;
+            filter: brightness(1) !important;
+        }
+
+        .hero-slide::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.3), rgba(102, 126, 234, 0.2));
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            background: rgba(15, 23, 42, 0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out;
+            text-shadow: 2px 2px 20px rgba(0,0,0,0.5);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.3s backwards;
+            text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+        }
+
+        .plane-animation {
+            position: absolute;
+            font-size: 3rem;
+            animation: flyPlane 15s linear infinite;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
+        }
+
+        @keyframes flyPlane {
+            0% {
+                left: -100px;
+                top: 20%;
+            }
+            100% {
+                left: calc(100% + 100px);
+                top: 30%;
+            }
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            color: white;
+            padding: 1.2rem 3rem;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            animation: pulse 2s ease-in-out infinite;
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(245, 158, 11, 0.6);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Packages Section */
+        .packages {
+            padding: 5rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .package-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: all 0.4s;
+            cursor: pointer;
+        }
+
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+
+        .package-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .package-card:hover .package-image {
+            transform: scale(1.1);
+        }
+
+        .package-content {
+            padding: 1.5rem;
+        }
+
+        .deal-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .package-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .package-countries {
+            color: #666;
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .country-tag {
+            background: #e0e7ff;
+            color: #4338ca;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+        }
+
+        .package-price {
+            font-size: 2rem;
+            color: #f59e0b;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .package-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .details-btn, .plan-btn {
+            flex: 1;
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .details-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .plan-btn {
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            color: white;
+        }
+
+        .details-btn:hover, .plan-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Reviews Section */
+        .reviews {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 2rem auto 0;
+        }
+
+        .review-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .review-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .review-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .review-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .review-info h4 {
+            color: var(--dark);
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .review-location {
+            color: #666;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .review-stars {
+            display: flex;
+            gap: 0.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-stars i {
+            color: #f59e0b;
+            font-size: 1.2rem;
+        }
+
+        .review-text {
+            color: #555;
+            line-height: 1.8;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .review-package {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            color: #667eea;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .review-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            transition: transform 0.5s;
+        }
+
+        .review-card:hover .review-image {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 2rem;
+            background: var(--dark);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1488085061387-422e29b40080?w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .contact-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.4s;
+            text-align: center;
+        }
+
+        .contact-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .contact-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .contact-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .contact-card p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-btn {
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 1rem;
+        }
+
+        .contact-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
+        }
+
+        .contact-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .contact-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: all 0.4s;
+            cursor: pointer;
+        }
+
+        .contact-img:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        /* Package Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            inset: 0;
+            background: rgba(0,0,0,0.8);
+            overflow-y: auto;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: white;
+            max-width: 900px;
+            margin: 2rem auto;
+            border-radius: 20px;
+            overflow: hidden;
+            animation: slideIn 0.4s;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-header {
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .close-modal {
+            float: right;
+            font-size: 2rem;
+            cursor: pointer;
+            color: white;
+        }
+
+        .itinerary-day {
+            background: #f8fafc;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        /* Floating Contact Button */
+        .floating-contact {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1500;
+        }
+
+        .contact-toggle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 5px 30px rgba(102, 126, 234, 0.5);
+            transition: all 0.3s;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .contact-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        .contact-toggle-text {
+            position: absolute;
+            top: 50%;
+            right: 85px;
+            transform: translateY(-50%);
+            background: var(--dark);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            white-space: nowrap;
+            font-size: 0.9rem;
+            animation: slideText 2s ease-in-out infinite;
+        }
+
+        @keyframes slideText {
+            0%, 100% { opacity: 0; transform: translateY(-50%) translateX(10px); }
+            50% { opacity: 1; transform: translateY(-50%) translateX(0); }
+        }
+
+        .contact-options {
+            position: absolute;
+            bottom: 90px;
+            right: 0;
+            display: none;
+            flex-direction: column;
+            gap: 1rem;
+            animation: walletOpen 0.5s ease-out;
+        }
+
+        @keyframes walletOpen {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .contact-options.open {
+            display: flex;
+        }
+
+        .contact-btn-float {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+        }
+
+        .contact-btn-float:hover {
+            transform: scale(1.15);
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+        }
+
+        .messenger-btn {
+            background: #0084FF;
+        }
+
+        .email-btn {
+            background: #EA4335;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+            color: white;
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            background: var(--secondary);
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.5rem; }
+            .hero-subtitle { font-size: 1.2rem; }
+            .packages-grid { grid-template-columns: 1fr; }
+            .nav { display: none; }
+            .hero-slider { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 1fr); }
+            .contact-images { grid-template-columns: repeat(2, 1fr); }
+            .reviews-grid { grid-template-columns: 1fr; }
+        }
+        
+        
+   <------Changins------->
+   /* ===== THE TRAVEL GLOBE LUXURY LOGO ===== */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-circle {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #667eea, #764ba2 80%);
+    box-shadow: 
+        0 0 15px rgba(118, 75, 162, 0.6),
+        0 0 40px rgba(102, 126, 234, 0.4),
+        inset 0 0 20px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    position: relative;
+    animation: rotate-glow 10s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-circle::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(118, 75, 162, 0.8);
+    opacity: 0;
+    animation: pulseGlow 3s infinite;
+}
+
+/* Logo Image inside */
+.logo-img {
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 10px rgba(118, 75, 162, 0.6));
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* Hover makes it pop */
+.logo-circle:hover .logo-img {
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 0 25px rgba(102, 126, 234, 0.9));
+}
+
+/* Logo text beside image */
+.logo-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #00ffff 0%, #667eea 40%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(102, 126, 234, 0.7);
+    animation: glowText 3s ease-in-out infinite alternate;
+}
+
+/* === Glowing Animations === */
+@keyframes rotate-glow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes pulseGlow {
+    0%, 100% { opacity: 0; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+}
+
+@keyframes glowText {
+    0% { text-shadow: 0 0 10px rgba(118, 75, 162, 0.6); }
+    50% { text-shadow: 0 0 20px rgba(118, 75, 162, 0.9), 0 0 40px rgba(102, 126, 234, 0.5); }
+    100% { text-shadow: 0 0 10px rgba(118, 75, 162, 0.6); }
+}
+
+        
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+    <div class="header-content">
+        <div class="logo">
+            <div class="logo-circle">
+                <img src="/global/logo.png" alt="The Travel Globe Logo" class="logo-img">
+            </div>
+            <div class="logo-text">The Travel Globe</div>
+        </div>
+
+        <nav class="nav">
+            <a href="#home">Home</a>
+            <a href="#packages">Packages</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-slider" id="heroSlider"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Discover Amazing Asia</h1>
+            <p class="hero-subtitle">Exclusive Multi-Country Travel Packages | Thailand • Singapore • Malaysia • Maldives • Istanbul</p>
+            <button class="cta-button" onclick="scrollToPackages()">
+                <i class="fas fa-plane-departure"></i> Explore Packages
+            </button>
+        </div>
+        <div class="plane-animation">✈️</div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="packages" id="packages">
+        <h2 class="section-title">🌏 Premium Multi-Country Packages</h2>
+        <div class="packages-grid" id="packagesGrid"></div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <h2 class="section-title">⭐ What Our Travelers Say</h2>
+        <p style="text-align: center; font-size: 1.2rem; color: #666; margin-bottom: 1rem;">Real experiences from real people who traveled with us!</p>
+        <div class="reviews-grid" id="reviewsGrid"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <h2 class="section-title" style="color: white;">📞 Get In Touch With Us</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">Ready to start your dream vacation? Contact us now!</p>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>info@travelglobe.pk</p>
+                    <p>jassonmiller363@gmail.com</p>
+                    <button class="contact-btn" onclick="window.open('https://www.facebook.com/share/1Cpr3JwALY/', '_blank')">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </button>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; margin-top: 4rem; font-size: 2rem;">🌍 Explore Our Destinations</h3>
+            <div class="contact-images">
+                <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=600&q=90" class="contact-img" alt="Thailand">
+                <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=600&q=90" class="contact-img" alt="Singapore">
+                <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=600&q=90" class="contact-img" alt="Malaysia">
+                <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=600&q=90" class="contact-img" alt="Maldives">
+                <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=600&q=90" class="contact-img" alt="Istanbul">
+                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=90" class="contact-img" alt="Dubai">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=90" class="contact-img" alt="Sri Lanka">
+                <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=600&q=90" class="contact-img" alt="Bali">
+            </div>
+        </div>
+    </section>
+
+    <!-- Package Details Modal -->
+    <div class="modal" id="packageModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close-modal" onclick="closeModal()">&times;</span>
+                <h2 id="modalTitle"></h2>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Floating Contact -->
+    <div class="floating-contact">
+        <div class="contact-toggle-text">Contact Us!</div>
+        <button class="contact-toggle" onclick="toggleContacts()">
+            <i class="fas fa-comments" id="contactIcon"></i>
+        </button>
+        <div class="contact-options" id="contactOptions">
+            <button class="contact-btn-float whatsapp-btn" onclick="openWhatsApp()">
+                <i class="fab fa-whatsapp"></i>
+            </button>
+            <button class="contact-btn-float messenger-btn" onclick="openMessenger()">
+                <i class="fab fa-facebook-messenger"></i>
+            </button>
+            <button class="contact-btn-float email-btn" onclick="openEmail()">
+                <i class="fas fa-envelope"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">The Travel Globe</div>
+            <p>Your Gateway to Unforgettable Asian Adventures</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#packages">Packages</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/share/1Cpr3JwALY/" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://wa.me/923171991742" target="_blank" class="social-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="mailto:jassonmiller363@gmail.com" class="social-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+923171991742" class="social-icon">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+            <p>&copy; 2026 The Travel Globe. All Rights Reserved.</p>
+            <p style="margin-top: 1rem; opacity: 0.8;">Rawalpindi, Punjab, Pakistan</p>
+        </div>
+    </footer>
+
+    <script>
+        // Hero Images - High Quality Asian Destinations
+        const heroImages = [
+            'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1920&q=95',
+            'https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=1920&q=95',
+            'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=1920&q=95',
+            'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=1920&q=95',
+            'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1920&q=95',
+            'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&q=95'
+        ];
+
+        // Reviews Data
+        const reviews = [
+            {
+                name: 'Sarah Ahmed',
+                location: 'Karachi, Pakistan',
+                rating: 5,
+                package: 'Thailand + Singapore + Malaysia',
+                text: 'Absolutely amazing experience! The Travel Globe made our honeymoon perfect. Everything was well organized from flights to hotels. The tour guides were friendly and knowledgeable. Highly recommend!',
+                image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=600&q=85',
+                initial: 'S'
+            },
+            {
+                name: 'Ali Hassan',
+                location: 'Lahore, Pakistan',
+                rating: 5,
+                package: 'Maldives + Sri Lanka Paradise',
+                text: 'The best vacation ever! Maldives was like paradise on earth. The overwater villa was stunning and Sri Lanka cultural sites were fascinating. Thank you Travel Globe for this unforgettable journey!',
+                image: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=600&q=85',
+                initial: 'A'
+            },
+            {
+                name: 'Fatima Khan',
+                location: 'Islamabad, Pakistan',
+                rating: 5,
+                package: 'Istanbul + Dubai Luxury',
+                text: 'What a trip! Istanbul history combined with Dubai luxury was perfect. The hotels were 5-star, food was delicious, and the desert safari in Dubai was thrilling. Worth every penny!',
+                image: 'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=600&q=85',
+                initial: 'F'
+            },
+            {
+                name: 'Ahmed Raza',
+                location: 'Rawalpindi, Pakistan',
+                rating: 5,
+                package: 'Singapore + Maldives Luxury',
+                text: 'Traveled with my family and everyone loved it! Singapore was clean and modern, Maldives was breathtaking. The Travel Globe team handled everything professionally. Will definitely book again!',
+                image: 'https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=600&q=85',
+                initial: 'A'
+            },
+            {
+                name: 'Ayesha Malik',
+                location: 'Faisalabad, Pakistan',
+                rating: 5,
+                package: 'Grand Asia Tour',
+                text: 'Best decision to book the Grand Asia Tour! We covered 4 countries and saw so many beautiful places. The itinerary was perfect and guides were excellent. Amazing memories created!',
+                image: 'https://images.unsplash.com/photo-1528181304800-259b08848526?w=600&q=85',
+                initial: 'A'
+            },
+            {
+                name: 'Usman Ali',
+                location: 'Multan, Pakistan',
+                rating: 5,
+                package: 'Malaysia + Thailand Beach',
+                text: 'Perfect beach vacation! Phi Phi Islands in Thailand were stunning and Penang food was incredible. Everything was arranged perfectly. Great value for money. Highly recommended!',
+                image: 'https://images.unsplash.com/photo-1559628376-f3fe5f782a2e?w=600&q=85',
+                initial: 'U'
+            }
+        ];
+
+        // Packages Data
+        const packages = [
+            {
+                id: 1,
+                title: 'Thailand + Singapore + Malaysia',
+                countries: ['Thailand', 'Singapore', 'Malaysia'],
+                image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&q=90',
+                price: '$1,899',
+                duration: '10 Days',
+                deal: 'SUPER DEAL',
+                description: 'Experience the best of Southeast Asia with this incredible 3-country package!',
+                itinerary: [
+                    { day: 1, title: 'Bangkok Arrival', desc: 'Grand Palace, Wat Pho, Floating Market' },
+                    { day: 2, title: 'Pattaya Beach', desc: 'Coral Island, Water Sports, Nightlife' },
+                    { day: 3, title: 'Bangkok to Singapore', desc: 'Transfer & Marina Bay Exploration' },
+                    { day: 4, title: 'Singapore City Tour', desc: 'Gardens by the Bay, Sentosa Island' },
+                    { day: 5, title: 'Universal Studios', desc: 'Full Day Theme Park Adventure' },
+                    { day: 6, title: 'Singapore to Kuala Lumpur', desc: 'Transfer & City Lights Tour' },
+                    { day: 7, title: 'KL Highlights', desc: 'Petronas Towers, Batu Caves, Shopping' },
+                    { day: 8, title: 'Genting Highlands', desc: 'Cable Car, Casino, Theme Park' },
+                    { day: 9, title: 'Free Day', desc: 'Shopping & Leisure' },
+                    { day: 10, title: 'Departure', desc: 'Airport Transfer' }
+                ],
+                includes: ['4-Star Hotels', 'Daily Breakfast', 'Airport Transfers', 'City Tours', 'Visa Assistance']
+            },
+            {
+                id: 2,
+                title: 'Maldives + Sri Lanka Paradise',
+                countries: ['Maldives', 'Sri Lanka'],
+                image: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=90',
+                price: '$2,499',
+                duration: '8 Days',
+                deal: 'HONEYMOON SPECIAL',
+                description: 'Perfect romantic getaway combining luxury beaches and cultural wonders!',
+                itinerary: [
+                    { day: 1, title: 'Maldives Arrival', desc: 'Luxury Resort Check-in, Beach Relaxation' },
+                    { day: 2, title: 'Water Activities', desc: 'Snorkeling, Diving, Island Hopping' },
+                    { day: 3, title: 'Spa & Sunset', desc: 'Couples Spa, Sunset Cruise' },
+                    { day: 4, title: 'Private Beach Day', desc: 'Overwater Villa Experience' },
+                    { day: 5, title: 'Colombo Arrival', desc: 'Transfer to Sri Lanka, City Tour' },
+                    { day: 6, title: 'Kandy Exploration', desc: 'Temple of Tooth, Tea Plantations' },
+                    { day: 7, title: 'Ella Hill Country', desc: 'Nine Arch Bridge, Train Ride' },
+                    { day: 8, title: 'Departure', desc: 'Airport Transfer' }
+                ],
+                includes: ['5-Star Resorts', 'All Meals', 'Water Sports', 'Spa Treatments', 'Private Transfers']
+            },
+            {
+                id: 3,
+                title: 'Istanbul + Dubai Luxury',
+                countries: ['Istanbul', 'Dubai'],
+                image: 'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&q=90',
+                price: '$2,199',
+                duration: '7 Days',
+                deal: 'LUXURY PACKAGE',
+                description: 'Discover the perfect blend of ancient history and modern luxury!',
+                itinerary: [
+                    { day: 1, title: 'Istanbul Arrival', desc: 'Hagia Sophia, Blue Mosque' },
+                    { day: 2, title: 'Bosphorus Cruise', desc: 'Boat Tour, Topkapi Palace' },
+                    { day: 3, title: 'Grand Bazaar', desc: 'Shopping, Turkish Bath Experience' },
+                    { day: 4, title: 'Dubai Transfer', desc: 'Arrival & Burj Khalifa Visit' },
+                    { day: 5, title: 'Desert Safari', desc: 'Dune Bashing, BBQ Dinner, Shows' },
+                    { day: 6, title: 'Dubai Mall & Marina', desc: 'Shopping, Aquarium, Fountain Show' },
+                    { day: 7, title: 'Departure', desc: 'Airport Transfer' }
+                ],
+                includes: ['5-Star Hotels', 'Daily Breakfast', 'All Tours', 'Desert Safari', 'Yacht Cruise']
+            },
+            {
+                id: 4,
+                title: 'Malaysia + Thailand Beach',
+                countries: ['Malaysia', 'Thailand'],
+                image: 'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800&q=90',
+                price: '$1,599',
+                duration: '9 Days',
+                deal: 'BEST VALUE',
+                description: 'Ultimate beach and city combination for the perfect vacation!',
+                itinerary: [
+                    { day: 1, title: 'Kuala Lumpur Arrival', desc: 'City Tour, Twin Towers' },
+                    { day: 2, title: 'Genting Highlands', desc: 'Cable Car, Theme Parks' },
+                    { day: 3, title: 'Malacca Heritage', desc: 'Historical Sites, River Cruise' },
+                    { day: 4, title: 'Penang Transfer', desc: 'Georgetown Street Art, Food Tour' },
+                    { day: 5, title: 'Phuket Arrival', desc: 'Beach Resort Check-in' },
+                    { day: 6, title: 'Phi Phi Islands', desc: 'Island Hopping, Snorkeling' },
+                    { day: 7, title: 'James Bond Island', desc: 'Phang Nga Bay Tour' },
+                    { day: 8, title: 'Patong Beach', desc: 'Water Sports, Nightlife' },
+                    { day: 9, title: 'Departure', desc: 'Airport Transfer' }
+                ],
+                includes: ['4-Star Hotels', 'Breakfast & Dinners', 'Island Tours', 'All Transfers', 'Tour Guide']
+            },
+            {
+                id: 5,
+                title: 'Singapore + Maldives Luxury',
+                countries: ['Singapore', 'Maldives'],
+                image: 'https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&q=90',
+                price: '$2,799',
+                duration: '8 Days',
+                deal: 'PREMIUM COMBO',
+                description: 'Urban sophistication meets tropical paradise in this exclusive package!',
+                itinerary: [
+                    { day: 1, title: 'Singapore Arrival', desc: 'Marina Bay, Gardens by the Bay' },
+                    { day: 2, title: 'Sentosa Island', desc: 'Universal Studios, Beach Clubs' },
+                    { day: 3, title: 'City Exploration', desc: 'Orchard Road, Clarke Quay' },
+                    { day: 4, title: 'Maldives Transfer', desc: 'Seaplane to Resort' },
+                    { day: 5, title: 'Water Villa', desc: 'Overwater Bungalow, Snorkeling' },
+                    { day: 6, title: 'Dolphin Cruise', desc: 'Sunset Cruise, Water Sports' },
+                    { day: 7, title: 'Private Island', desc: 'Sandbank Picnic, Spa Day' },
+                    { day: 8, title: 'Departure', desc: 'Seaplane Transfer to Airport' }
+                ],
+                includes: ['5-Star Accommodation', 'All Meals', 'Seaplane Transfers', 'Water Activities', 'Spa Sessions']
+            },
+            {
+                id: 6,
+                title: 'Grand Asia Tour',
+                countries: ['Thailand', 'Malaysia', 'Singapore', 'Sri Lanka'],
+                image: 'https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&q=90',
+                price: '$3,299',
+                duration: '14 Days',
+                deal: 'MEGA DEAL',
+                description: 'The ultimate 4-country adventure covering the best of Asia!',
+                itinerary: [
+                    { day: 1, title: 'Bangkok Arrival', desc: 'Grand Palace, Temples Tour' },
+                    { day: 2, title: 'Pattaya Beach', desc: 'Coral Island, Water Sports' },
+                    { day: 3, title: 'Floating Market', desc: 'Traditional Markets, Shopping' },
+                    { day: 4, title: 'Kuala Lumpur', desc: 'Transfer & City Lights' },
+                    { day: 5, title: 'KL Highlights', desc: 'Petronas Towers, Batu Caves' },
+                    { day: 6, title: 'Genting Highlands', desc: 'Cable Car, Theme Parks' },
+                    { day: 7, title: 'Singapore Transfer', desc: 'Marina Bay, Gardens' },
+                    { day: 8, title: 'Sentosa Island', desc: 'Universal Studios' },
+                    { day: 9, title: 'Singapore Sights', desc: 'Chinatown, Little India' },
+                    { day: 10, title: 'Colombo Arrival', desc: 'City Tour, Shopping' },
+                    { day: 11, title: 'Kandy Temple', desc: 'Temple of Tooth, Cultural Show' },
+                    { day: 12, title: 'Nuwara Eliya', desc: 'Tea Plantations, Hill Country' },
+                    { day: 13, title: 'Beach Relaxation', desc: 'Bentota Beach Resort' },
+                    { day: 14, title: 'Departure', desc: 'Airport Transfer' }
+                ],
+                includes: ['4-5 Star Hotels', 'Daily Breakfast', 'All Tours', 'Inter-Country Flights', 'Visa Support']
+            }
+        ];
+
+        // Initialize Hero Slider
+        function initHeroSlider() {
+            const slider = document.getElementById('heroSlider');
+            
+            heroImages.forEach((img, index) => {
+                const slide = document.createElement('div');
+                slide.className = 'hero-slide';
+                slide.style.backgroundImage = `url('${img}')`;
+                slider.appendChild(slide);
+            });
+        }
+
+        // Render Packages
+        function renderPackages() {
+            const grid = document.getElementById('packagesGrid');
+            grid.innerHTML = packages.map(pkg => `
+                <div class="package-card">
+                    <img src="${pkg.image}" alt="${pkg.title}" class="package-image">
+                    <div class="package-content">
+                        <div class="deal-badge">🔥 ${pkg.deal}</div>
+                        <h3 class="package-title">${pkg.title}</h3>
+                        <div class="package-countries">
+                            ${pkg.countries.map(country => `<span class="country-tag">📍 ${country}</span>`).join('')}
+                        </div>
+                        <p>${pkg.description}</p>
+                        <div class="package-price">${pkg.price} <span style="font-size: 1rem; color: #666;">/ ${pkg.duration}</span></div>
+                        <div class="package-buttons">
+                            <button class="details-btn" onclick="showDetails(${pkg.id})">
+                                <i class="fas fa-info-circle"></i> Details
+                            </button>
+                            <button class="plan-btn" onclick="planTour(${pkg.id})">
+                                <i class="fas fa-plane"></i> Let's Plan
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Render Reviews
+        function renderReviews() {
+            const grid = document.getElementById('reviewsGrid');
+            grid.innerHTML = reviews.map((review, index) => `
+                <div class="review-card" style="animation: fadeIn 0.6s ease-out ${index * 0.1}s backwards;">
+                    <img src="${review.image}" class="review-image" alt="${review.package}">
+                    <div class="review-header">
+                        <div class="review-avatar">${review.initial}</div>
+                        <div class="review-info">
+                            <h4>${review.name}</h4>
+                            <div class="review-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                ${review.location}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        ${Array(review.rating).fill('<i class="fas fa-star"></i>').join('')}
+                    </div>
+                    <p class="review-text">"${review.text}"</p>
+                    <span class="review-package">
+                        <i class="fas fa-suitcase-rolling"></i> ${review.package}
+                    </span>
+                </div>
+            `).join('');
+        }
+
+        // Show Package Details
+        function showDetails(id) {
+            const pkg = packages.find(p => p.id === id);
+            if (!pkg) return;
+
+            document.getElementById('modalTitle').textContent = pkg.title;
+            document.getElementById('modalBody').innerHTML = `
+                <img src="${pkg.image}" style="width: 100%; border-radius: 10px; margin-bottom: 1.5rem;">
+                <h3>📋 Package Details</h3>
+                <p style="margin-bottom: 1rem;">${pkg.description}</p>
+                
+                <div style="background: #f0fdf4; padding: 1rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                    <h4>✅ Package Includes:</h4>
+                    <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                        ${pkg.includes.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </div>
+
+                <h3 style="margin-bottom: 1rem;">📅 Day-by-Day Itinerary</h3>
+                ${pkg.itinerary.map(day => `
+                    <div class="itinerary-day">
+                        <h4>Day ${day.day}: ${day.title}</h4>
+                        <p style="color: #666; margin-top: 0.5rem;">${day.desc}</p>
+                    </div>
+                `).join('')}
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button class="plan-btn" style="width: 100%; padding: 1.2rem;" onclick="planTour(${pkg.id})">
+                        <i class="fas fa-plane"></i> Book This Package - ${pkg.price}
+                    </button>
+                </div>
+            `;
+
+            document.getElementById('packageModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('packageModal').style.display = 'none';
+        }
+
+        function planTour(id) {
+            const pkg = packages.find(p => p.id === id);
+            const message = `Hi! I'm interested in the "${pkg.title}" package (${pkg.price} for ${pkg.duration}). Please provide more details and help me plan this tour.`;
+            openWhatsApp(message);
+            closeModal();
+        }
+
+        // Floating Contact Functions
+        let contactsOpen = false;
+
+        function toggleContacts() {
+            contactsOpen = !contactsOpen;
+            const options = document.getElementById('contactOptions');
+            const icon = document.getElementById('contactIcon');
+            
+            if (contactsOpen) {
+                options.classList.add('open');
+                icon.className = 'fas fa-times';
+            } else {
+                options.classList.remove('open');
+                icon.className = 'fas fa-comments';
+            }
+        }
+
+        function openWhatsApp(customMessage) {
+            const message = customMessage || "Hi! I'm interested in your travel packages. Can you help me plan my trip?";
+            window.open(`https://wa.me/923171991742?text=${encodeURIComponent(message)}`, '_blank');
+        }
+
+        function openMessenger() {
+            window.open('https://www.facebook.com/share/1Cpr3JwALY/', '_blank');
+        }
+
+        function openEmail() {
+            const subject = "Travel Package Inquiry";
+            const body = "Hi,\n\nI'm interested in learning more about your travel packages.\n\nPlease contact me.\n\nThank you!";
+            window.open(`mailto:jassonmiller363@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, '_blank');
+        }
+
+        function scrollToPackages() {
+            document.getElementById('packages').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('packageModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // Initialize everything
+        window.onload = function() {
+            initHeroSlider();
+            renderPackages();
+            renderReviews();
+        }
+    </script>
+</body>
+</html>		
